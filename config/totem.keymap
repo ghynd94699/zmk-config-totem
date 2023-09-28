@@ -92,9 +92,9 @@
                 adjust_layer {
                         label= "ADJ";
                         bindings = <
-                                &none      &none           &mmv MOVE_UP    &none            &none          &none  &none             &none             &none              &none
-                                &kp LCTRL  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none          &none  &mkp LCLK         &mwh SCROLL_UP    &mkp RCLK          &kp RCTRL
-                        &none   &none      &kp END         &none           &kp HOME         &none          &none  &mwh SCROLL_LEFT  &mwh SCROLL_DOWN  &mwh SCROLL_RIGHT  &none      &none
+                                &bt BT_CLR &none           &mmv MOVE_UP    &none            &none          &bt BT_SEL 0  &none             &none             &none              &none
+                                &kp LCTRL  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none          &bt BT_SEL 1  &mkp LCLK         &mwh SCROLL_UP    &mkp RCLK          &kp RCTRL
+                        &none   &none      &kp END         &none           &kp HOME         &none          &none         &mwh SCROLL_LEFT  &mwh SCROLL_DOWN  &mwh SCROLL_RIGHT  &none      &none
                                                            &none            &trans          &trans         &trans &trans            &none
                         >;
                 };
