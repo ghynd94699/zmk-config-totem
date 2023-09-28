@@ -25,10 +25,15 @@
                 key-positions = <1 2>;
                 bindings = <&kp ESC>;
             };
-            combo_tvp {
-                timeout-ms = <100>;
-                key-positions = <11 12 13>;
-                bindings = <&tog TVP1>;
+            combo_mhen {
+                timeout-ms = <50>;
+                key-positions = <11 12>;
+                bindings = <&kp LANG2>;
+            };
+            combo_hen {
+                timeout-ms = <50>;
+                key-positions = <17 18>;
+                bindings = <&kp LANG1>;
             };
     };
 
@@ -72,9 +77,9 @@ keymap {
         sim_layer {
                 label= "SYM";
                 bindings = <
-                        &td LS(FSLH) EXCL &kp AT            &kp HASH            &kp DLLR          &kp PRCNT       &kp CARET    &kp LS(SEMI) &kp LBKT       &td LS(LBRC) LS(N7) &kp PIPE
-                        &kp LCTRL         &td PIPE LS(RBRC) &td NUHS RBRC       &td LS(N9) LS(N8) &none           &kp LS(APOS) &kp MINUS    &mt LALT EQUAL &kp RGUI            &kp RCTRL
-                &none   &kp LC(A)         &kp LC(Z)         &td LS(INS) LC(INS) &kp LC(Y)         &none           &kp UNDER    &kp UNDER    &kp PLUS       &none               &none     &none
+                        &td LS(FSLH) EXCL &kp AT         &kp HASH            &kp DLLR          &kp PRCNT       &kp CARET    &kp LS(SEMI) &kp LBKT   &td LS(LBRC) LS(N7) &kp PIPE
+                        &kp LCTRL         &td PIPE RBKT  &td NUHS RBRC       &td LS(N9) LS(N8) &none           &kp LS(APOS) &kp MINUS    &kp EQUAL  &none               &kp RCTRL
+                &none   &kp LC(A)         &kp LC(Z)      &td LS(INS) LC(INS) &kp LC(Y)         &none           &kp UNDER    &kp UNDER    &kp PLUS   &none               &none     &none
                                                                &none               &trans            &trans          &trans       &trans       &none
                 >;
         };
@@ -84,7 +89,7 @@ keymap {
                 bindings = <
                         &kp N1      &kp N2     &kp N3      &kp N4      &kp N5          &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
                         &kp POUND   &kp AMPS   &kp STAR    &kp LPAR    &kp RPAR        &kp RBKT    &kp QMARK   &kp BSLH   &kp NUBS   &kp COLON
-                &none   &kp DQT     &kp LT  &kp GRAVE    &kp TILDE   &kp NUHS        &kp LANG1    &kp LANG2   &kp KP_N2   &kp KP_N3   &kp KP_MULTIPLY &none
+                &none   &kp INT7     &kp INT8  &kp INT9    &kp TILDE   &kp NUHS        &kp LANG1   &kp LANG2   &kp KP_N2   &kp KP_N3   &kp KP_MULTIPLY &none
                                                 &none       &trans      &trans         &trans      &trans   &none
                 >;
         };
