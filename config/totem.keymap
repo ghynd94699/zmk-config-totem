@@ -8,6 +8,7 @@
 #define SYM  1
 #define NAV  2
 #define ADJ  3
+
 &lt {
         flavor = "hold-preferred";
         tapping-term-ms = <165>;
@@ -15,11 +16,12 @@
 
 #define U_MOUSE_MOVE_MAX 1100
 #define U_MOUSE_SCROLL_MAX 100
+
 &mmv {
-	time-to-max-speed-ms = <80>;
+	time-to-max-speed-ms = <60>;
 };
 &mwh {
-        time-to-max-speed-ms = <250>;
+        time-to-max-speed-ms = <200>;
 };
 
 / {
@@ -30,6 +32,11 @@
                         key-positions = <1 2>;
                         bindings = <&kp ESC>;
                 };
+                combo_caps {
+			timeout-ms = <80>;
+			key-positions = <7 8>;
+			bindings = <&caps_word>;
+		};
                 combo_mhen {
                         timeout-ms = <80>;
                         key-positions = <11 12>;
