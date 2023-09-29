@@ -9,28 +9,35 @@
 #define NAV  2
 #define ADJ  3
 
-&mt {
-        quick-tap-ms = <100>;
-        global-quick-tap;
-        flavor = "tap-preferred";
-        tapping-term-ms = <170>;
+
+&lt {
+        flavor = "hold-preferred";
+        tapping-term-ms = <165>;
+};
+
+&mmv {
+	time-to-max-speed-ms = <80>;
+};
+
+&mwh {
+  time-to-max-speed-ms = <300>;
 };
 
 / {
         combos {
                 compatible = "zmk,combos";
                 combo_esc {
-                        timeout-ms = <50>;
+                        timeout-ms = <80>;
                         key-positions = <1 2>;
                         bindings = <&kp ESC>;
                 };
                 combo_mhen {
-                        timeout-ms = <50>;
+                        timeout-ms = <80>;
                         key-positions = <11 12>;
                         bindings = <&kp F23>;
                 };
                 combo_hen {
-                        timeout-ms = <50>;
+                        timeout-ms = <80>;
                         key-positions = <17 18>;
                         bindings = <&kp F24>;
                 };
@@ -45,12 +52,31 @@
         };
 
         behaviors {
+                hm: homerow_mods {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "HOMEROW_MODS";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <260>;
+                        quick-tap-ms = <180>;
+                        flavor = "tap-preferred";
+                        global-quick-tap;
+                        bindings = <&kp>, <&kp>;
+                };
+                shm: shift_homerow_mods {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "HOMEROW_MODS";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <220>;
+                        quick-tap-ms = <0>;
+                        flavor = "tap-preferred";
+                        bindings = <&kp>, <&kp>;
+                };
 	        td: tapdance {
 		        compatible = "zmk,behavior-hold-tap";
 		        label = "TAPDANCE";
 		        #binding-cells = <2>;
-		        tapping-term-ms = <190>;
-		        quick-tap-ms = <250>;
+		        tapping-term-ms = <170>;
+		        quick-tap-ms = <0>;
 		        flavor = "tap-preferred";
 		        bindings = <&kp>, <&kp>;
 	        };
@@ -62,9 +88,9 @@
                         label= "BASE";
                         bindings = <
                                 &kp Q       &kp W       &kp COMMA   &kp DOT     &td COLON SEMI          &kp M          &kp R        &kp D       &kp Y       &kp P
-                                &mt LCTRL A &mt LGUI O  &mt LALT E  &kp I       &kp U                   &kp G          &kp T        &kp K       &mt RGUI S  &mt RCTRL N
+                                &hm LCTRL A &hm LGUI O  &hm LALT E  &kp I       &kp U                   &kp G          &kp T        &kp K       &hm RGUI S  &hm RCTRL N
                         &none   &kp Z       &kp X       &kp C       &kp V       &kp F                   &kp B          &kp H        &kp J       &kp L       &td BSLH FSLH    &none
-                                                        &none       &lt SYM TAB &mt LSHFT SPACE         &mt RSHFT RET  &lt NAV BSPC &none
+                                                        &none       &lt SYM TAB &shm LSHFT SPACE        &shm RSHFT RET  &lt NAV BSPC &none
                         >;
                 };
 
@@ -82,9 +108,9 @@
                         label= "NAVI";
                         bindings = <
                                 &kp N1         &kp N2       &kp N3       &kp N4  &kp N5         &kp N6  &kp N7    &kp N8    &kp N9     &kp N0
-                                &mt LCTRL F12  &mt LGUI F2  &mt LALT F3  &kp F4  &kp F5         &none   &kp BSPC  &kp UP    &kp DEL    &kp RCTRL
+                                &hm LCTRL F12  &hm LGUI F2  &hm LALT F3  &kp F4  &kp F5         &none   &kp BSPC  &kp UP    &kp DEL    &kp RCTRL
                         &none   &kp F6         &kp F7       &kp F8       &kp F9  &kp F10        &none   &kp LEFT  &kp DOWN  &kp RIGHT  &none     &none
-                                                        &none        &trans  &trans         &trans  &trans    &none
+                                                            &none        &trans  &trans         &trans  &trans    &none
                         >;
                 };
 
@@ -95,7 +121,7 @@
                                 &bt BT_CLR &none           &mmv MOVE_UP    &none            &none          &bt BT_SEL 0  &none             &none             &none              &none
                                 &kp LCTRL  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none          &bt BT_SEL 1  &mkp LCLK         &mwh SCROLL_UP    &mkp RCLK          &kp RCTRL
                         &none   &none      &kp END         &none           &kp HOME         &none          &none         &mwh SCROLL_LEFT  &mwh SCROLL_DOWN  &mwh SCROLL_RIGHT  &none      &none
-                                                           &none            &trans          &trans         &trans &trans            &none
+                                                           &none           &trans           &trans         &trans        &trans            &none
                         >;
                 };
         };
