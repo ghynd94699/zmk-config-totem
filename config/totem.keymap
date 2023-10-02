@@ -28,22 +28,22 @@
         combos {
                 compatible = "zmk,combos";
                 combo_esc {
-                        timeout-ms = <80>;
+                        timeout-ms = <72>;
                         key-positions = <1 2>;
                         bindings = <&kp ESC>;
                 };
                 combo_caps {
-			timeout-ms = <80>;
+			timeout-ms = <72>;
 			key-positions = <7 8>;
 			bindings = <&caps_word>;
 		};
                 combo_mhen {
-                        timeout-ms = <80>;
+                        timeout-ms = <72>;
                         key-positions = <11 12>;
                         bindings = <&kp F23>;
                 };
                 combo_hen {
-                        timeout-ms = <80>;
+                        timeout-ms = <72>;
                         key-positions = <17 18>;
                         bindings = <&kp F24>;
                 };
@@ -63,7 +63,7 @@
                         label = "HOMEROW_MODS";
                         #binding-cells = <2>;
                         tapping-term-ms = <260>;
-                        quick-tap-ms = <180>;
+                        quick-tap-ms = <220>;
                         flavor = "tap-preferred";
                         global-quick-tap;
                         bindings = <&kp>, <&kp>;
@@ -96,17 +96,17 @@
                                 &kp Q       &kp W       &kp COMMA   &kp DOT     &td COLON SEMI          &kp M          &kp R        &kp D       &kp Y       &kp P
                                 &hm LCTRL A &hm LGUI O  &hm LALT E  &kp I       &kp U                   &kp G          &kp T        &kp K       &hm RGUI S  &hm RCTRL N
                         &none   &kp Z       &kp X       &kp C       &kp V       &kp F                   &kp B          &kp H        &kp J       &kp L       &td BSLH FSLH    &none
-                                                        &none       &lt SYM TAB &shm LSHFT SPACE        &shm RSHFT RET  &lt NAV BSPC &none
+                                                        &none       &lt SYM TAB &shm LSHFT SPACE        &shm RSHFT RET &lt NAV BSPC &none
                         >;
                 };
 
                 sim_layer {
                         label= "SYM";
                         bindings = <
-                                &td LS(FSLH) EXCL &kp DQT        &kp HASH            &kp DLLR          &kp PRCNT       &kp AMPS  &kp PLUS  &kp AT    &td GRAVE APOS &kp PIPE
-                                &kp LCTRL         &td RBRC LBRC  &td RBKT LBKT       &td LS(N0) LS(N9) &none           &kp STAR  &kp MINUS &kp CARET &none          &kp RCTRL
-                        &none   &kp LC(A)         &kp LC(Z)      &td LS(INS) LC(INS) &kp LC(Y)         &none           &kp UNDER &kp EQUAL &kp TILDE &none          &none     &none
-                                                                 &none               &trans            &trans          &trans    &trans    &none
+                                &td LS(FSLH) EXCL &kp AT         &kp HASH            &kp DLLR          &kp PRCNT       &kp AMPS &kp PLUS  &kp APOS  &kp DQT   &kp PIPE
+                                &kp LCTRL         &td RBRC LBRC  &td RBKT LBKT       &td LS(N0) LS(N9) &none           &kp STAR &kp MINUS &kp CARET &kp GRAVE &kp RCTRL
+                        &none   &kp LC(A)         &kp LC(Z)      &td LS(INS) LC(INS) &kp LC(Y)         &none           &kp none &kp EQUAL &kp UNDER &kp TILDE &none     &none
+                                                                 &none               &trans            &trans          &trans   &trans    &none
                         >;
                 };
 
@@ -126,7 +126,7 @@
                         bindings = <
                                 &bt BT_CLR &none           &mmv MOVE_UP    &none            &none          &bt BT_SEL 0  &none             &none             &none              &none
                                 &kp LCTRL  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none          &bt BT_SEL 1  &mkp LCLK         &mwh SCROLL_UP    &mkp RCLK          &kp RCTRL
-                        &none   &none      &kp END         &none           &kp HOME         &none          &none         &mwh SCROLL_LEFT  &mwh SCROLL_DOWN  &mwh SCROLL_RIGHT  &none      &none
+                        &none   &none      &kp END         &none           &kp HOME         &none          &bt BT_SEL 2  &mwh SCROLL_LEFT  &mwh SCROLL_DOWN  &mwh SCROLL_RIGHT  &none      &none
                                                            &none           &trans           &trans         &trans        &trans            &none
                         >;
                 };
