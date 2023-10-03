@@ -105,7 +105,7 @@
                         bindings = <
                                 &td LS(FSLH) EXCL &kp AT         &kp HASH            &kp DLLR          &kp PRCNT       &kp AMPS &kp PLUS  &kp APOS  &kp DQT   &kp PIPE
                                 &kp LCTRL         &td RBRC LBRC  &td RBKT LBKT       &td LS(N0) LS(N9) &none           &kp STAR &kp MINUS &kp UNDER &kp GRAVE &kp RCTRL
-                        &none   &kp LC(A)         &kp LC(Z)      &td LS(INS) LC(INS) &kp LC(Y)         &none           &none    &kp EQUAL &kp CARET &kp TILDE &none     &none
+                        &none   &kp LC(A)         &kp LC(Z)      &td LS(INS) LC(INS) &kp LC(Y)         &none           &none    &kp EQUAL &kp TILDE &kp CARET &none     &none
                                                                  &none               &trans            &trans          &trans   &trans    &none
                         >;
                 };
