@@ -93,10 +93,10 @@
                 base_layer {
                         label= "BASE";
                         bindings = <
-                                &kp Q       &kp W       &kp COMMA   &kp DOT     &td COLON SEMI          &kp M          &kp R        &kp D       &kp Y       &kp P
-                                &hm LCTRL A &hm LGUI O  &hm LALT E  &kp I       &kp U                   &kp G          &kp T        &kp K       &hm RGUI S  &hm RCTRL N
-                        &none   &kp Z       &kp X       &kp C       &kp V       &kp F                   &kp B          &kp H        &kp J       &kp L       &td BSLH FSLH    &none
-                                                        &none       &lt SYM TAB &shm LSHFT SPACE        &shm RSHFT RET &lt NAV BSPC &none
+                                &kp Q       &kp W       &kp COMMA   &kp DOT      &td COLON SEMI          &kp M         &kp R        &kp D       &kp Y       &kp P
+                                &hm LCTRL A &hm LGUI O  &hm LALT E  &hm LSHFT I  &kp U                   &kp G         &hm RSHFT T  &kp K       &hm RGUI S  &hm RCTRL N
+                        &none   &kp Z       &kp X       &kp C       &kp V        &kp F                   &kp B         &kp H        &kp J       &kp L       &td BSLH FSLH    &none
+                                                        &none       &lt SYM TAB  &shm LSHFT SPACE        &lt NAV RET   &lt ADJ BSPC &none
                         >;
                 };
 
@@ -113,10 +113,10 @@
                 nav_layer {
                         label= "NAVI";
                         bindings = <
-                                &none         &kp N1       &kp N2       &kp N3  &none         &kp F2  &kp F4    &kp F7    &kp F12    &none
-                                &hm LCTRL N0  &hm LGUI N4  &hm LALT N5  &kp N6  &none         &none   &kp BSPC  &kp UP    &kp DEL    &kp RCTRL
-                        &none   &none         &kp N7       &kp N8       &kp N9  &none         &none   &kp LEFT  &kp DOWN  &kp RIGHT  &none     &none
-                                                        &none        &trans  &trans        &trans  &trans    &none
+                                &none         &kp N1       &kp N2       &kp N3        &td COLON SEMI  &kp F2  &kp F4    &kp F7    &kp F12    &none
+                                &hm LCTRL N0  &hm LGUI N4  &hm LALT N5  &hm LSHFT N6  &kp DOT         &none   &kp BSPC  &kp UP    &kp DEL    &kp RCTRL
+                        &none   &none         &kp N7       &kp N8       &kp N9        &none           &none   &kp LEFT  &kp DOWN  &kp RIGHT  &none     &none
+                                                           &none        &trans        &trans          &trans  &trans    &none
                         >;
                 };
 
