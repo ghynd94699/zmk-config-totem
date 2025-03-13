@@ -88,7 +88,7 @@
                                 &kp Q       &kp W       &kp COMMA   &kp DOT      &td COLON SEMI          &kp M         &kp R        &kp D       &kp Y       &kp P
                                 &hm LCTRL A &hm LGUI O  &hm LALT E  &hm LSHFT I  &kp U                   &kp G         &hm RSHFT T  &kp K       &hm RGUI S  &hm RCTRL N
                         &none   &kp Z       &kp X       &kp C       &kp V        &kp F                   &kp B         &kp H        &kp J       &kp L       &td BSLH FSLH    &none
-                                                        &none       &lt SYM TAB  &shm LSHFT SPACE        &lt NAV RET   &lt ADJ BSPC &none
+                                                        &kp BSPC    &lt SYM TAB  &shm LSHFT SPACE        &lt NAV RET   &lt ADJ BSPC &kp DEL
                         >;
                 };
 
