@@ -89,8 +89,8 @@
                 base_layer {
                         label= "BASE";
                         bindings = <
-                                &kp Q       &kp W       &kp COMMA            &kp DOT      &td COLON SEMI          &kp M           &kp R        &kp D       &kp Y       &kp P
-                                &hm LCTRL A &hm LGUI O  &hm LALT E           &hm LSHFT I  &kp U                   &kp G           &hm RSHFT T  &kp K       &hm RGUI S  &hm RCTRL N
+                                &kp INT1       &kp INT2       &kp INT3            &kp INT4      &kp INT5          &kp INT6           &kp INT7        &kp INT8       &kp INT9       &kp INT9
+                                &kp LANG1 &kp LANG2  &kp LANG3           &kp LANG4  &kp LANG5                   &kp LANG6           &kp LANG7  &kp LANG8       &kp LANG9  &hm RCTRL N
                         &none   &kp Z       &kp X       &kp C                &kp V        &kp F                   &kp B           &kp H        &kp J       &kp L       &td BSLH FSLH    &none
                                                         &lt ADJ LC(SPACE)    &lt SYM TAB  &shm LSHFT SPACE        &shm RSHFT RET  &mo NAV      &kp BSPC
                         >;
