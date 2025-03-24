@@ -42,13 +42,13 @@
                 combo_mhen {
                         timeout-ms = <72>;
                         key-positions = <11 12>;
-                        bindings = <&kp F23 &kp LANG1>;
+                        bindings = <&kp LANG1>;
                         layers = <0>;
                 };
                 combo_hen {
                         timeout-ms = <72>;
                         key-positions = <17 18>;
-                        bindings = <&kp F24 &kp LANG2>;
+                        bindings = <&kp LANG2>;
                         layers = <0>;
                 };
         };
